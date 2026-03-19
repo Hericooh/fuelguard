@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 6%;
+    --foreground: 40 10% 92%;
+
+    --card: 220 18% 10%;
+    --card-foreground: 40 10% 92%;
+
+    --popover: 220 18% 10%;
+    --popover-foreground: 40 10% 92%;
+
+    --primary: 38 92% 50%;
+    --primary-foreground: 220 20% 6%;
+
+    --secondary: 220 16% 16%;
+    --secondary-foreground: 40 10% 82%;
+
+    --muted: 220 14% 14%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 24 80% 55%;
+    --accent-foreground: 220 20% 6%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 72% 42%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 220 20% 6%;
+
+    --border: 220 14% 18%;
+    --input: 220 14% 18%;
+    --ring: 38 92% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 18% 8%;
+    --sidebar-foreground: 40 10% 82%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 220 20% 6%;
+    --sidebar-accent: 220 16% 14%;
+    --sidebar-accent-foreground: 40 10% 82%;
+    --sidebar-border: 220 14% 18%;
+    --sidebar-ring: 38 92% 50%;
+
+    --gradient-amber: linear-gradient(135deg, hsl(38, 92%, 50%), hsl(24, 80%, 55%));
+    --gradient-card: linear-gradient(145deg, hsl(220, 18%, 12%), hsl(220, 18%, 8%));
+    --gradient-hero: linear-gradient(180deg, hsl(220, 20%, 8%) 0%, hsl(220, 20%, 4%) 100%);
+    --shadow-glow: 0 0 40px hsl(38, 92%, 50%, 0.15);
+    --shadow-card: 0 4px 24px hsl(0, 0%, 0%, 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .gradient-amber {
+    background: var(--gradient-amber);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .text-gradient {
+    background: var(--gradient-amber);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
